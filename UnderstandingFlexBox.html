@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+  body{
+    display:flex;
+    flex-wrap:wrap;
+    align-content:flex-end;
+  }
+    .h1{
+      color: darksalmon;
+      text-align: center;
+      text-decoration:overline darkgrey;
+      font-size:20px;
+      font-weight:lighter;
+      
+    }
+   div{
+     height:50px;
+     width:100px;
+     border:1px solid black;
+     
+    }
+    .div2{
+      height:80px;
+      width: 100px;
+      background-color: palevioletred;
+      border-radius:20px;
+      border-color:pink;
+      border:50px red;
+      position:sticky;
+      left:50px;
+      top: 10px;
+    }
+    .div3{
+      height:100px;
+      width:80px;
+      border:2px red;
+      background-image:url("/Screenshot_20250418_170238.jpg");
+      background-size:auto;
+    }
+    .main{
+      height:500px;
+      width:500px;
+      background-color:yellow;
+      display:flex;
+      flex-direction:row;
+      justify-content:space-around;between
+      align-items:flex-end;
+      
+      
+      
+      
+    }
+    .first,.second,.third,.fourth{
+      height:100px;
+      width:100px;
+    }
+    .first{
+      background-color:red;
+      flex-shrink:0;
+      flex-grow:1;
+    }
+    .second{
+      background-color: deeppink;
+      
+      flex-grow:5;
+    }
+    .third{
+      background-color: hotpink;
+      flex-shrink:0;
+      
+    }
+    .fourth{
+      background-color:grey;
+      flex-shrink:0;
+      flex-grow:10;
+      
+    }
+    #parent{
+      height:400px;
+      width:400px;
+      background-color:grey;
+      display: flex;
+      flex-direction:row;
+      justify-content:center;
+      align-items: center;
+      
+    }
+    #child{
+      height: 100px;
+      width: 100px;
+      background-color:red;
+      
+      
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body><div>
+  <h1 class="h1">Hello... </h1></div>
+  <br>
+  <p> 
+
+ChatGPT
+
+You said:
+Font display property in css
+ChatGPT said:
+The font-display property in CSS is used with @font-face to control how web fonts are displayed while they are loading.
+
+Syntax:
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont.woff2') format('woff2');
+  font-display: swap; /* or auto, block, fallback, optional */
+}
+Values of font-display:
+auto – Default behavior. The browser decides how to handle the font loading.
+
+block – Hides text until the font is fully loaded (can cause a "flash of invisible text").
+
+swap – Shows fallback font immediately, then swaps to the custom font when it's ready (causes "flash of unstyled text").
+
+fallback – Shows fallback font for a short time, then swaps to custom font only if it’s ready quickly.
+
+optional – Similar to fallback, but the font may never load on slow connections or if performance is prioritized.
+
+Example:
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto.woff2') format('woff2');
+  font-display: swap;
+}
+Use font-display: swap; if you want better performance and user experience. Let me know if you want a demo or visual explanation too!
+
+You said:
+Explain insimple words
+ChatGPT said:
+Alright, here’s a simple explanation:
+
+The font-display property tells the browser what to do while your custom font is still loading.
+
+Imagine you're using a special font on your website, but it takes a little time to load. So, what should the browser do in that time? That’s what font-display controls.
+
+Simple meanings of the values:
+auto – Let the browser decide.
+
+block – Hide the text until the font loads (text is invisible at first).
+
+swap – Show normal/default font first, then change to your font when it’s ready.
+
+fallback – Show normal font first, but only switch to your font if it loads quickly.
+
+optional – Like fallback, but might not even load your font if the internet is slow.
+
+Most used:
+Use swap — because it shows the text right away and changes the font when ready (so users don’t have to wait to read).</p>
+<br>
+<p>
+  The font-display property in CSS is used with @font-face to control how web fonts are displayed while they are loading.
+
+Syntax:
+css
+Copy code
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont.woff2') format('woff2');
+  font-display: swap; /* or auto, block, fallback, optional */
+}
+Values of font-display:
+auto – Default behavior. The browser decides how to handle the font loading.
+
+block – Hides text until the font is fully loaded (can cause a "flash of invisible text").
+
+swap – Shows fallback font immediately, then swaps to the custom font when it's ready (causes "flash of unstyled text").
+
+fallback – Shows fallback font for a short time, then swaps to custom font only if it’s ready quickly.
+
+optional – Similar to fallback, but the font may never load on slow connections or if performance is prioritized.
+
+Example:
+css
+Copy code
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto.woff2') format('woff2');
+  font-display: swap;
+}
+Use font-display: swap; if you want better performance and user experience. Let me know if you want a demo or visual explanation too!
+
+
+
+
+
+
+
+You said:
+Explain insimple words
+
+
+ChatGPT said:
+Alright, here’s a simple explanation:
+
+The font-display property tells the browser what to do while your custom font is still loading.
+
+Imagine you're using a special font on your website, but it takes a little time to load. So, what should the browser do in that time? That’s what font-display controls.
+
+Simple meanings of the values:
+auto – Let the browser decide.
+
+block – Hide the text until the font loads (text is invisible at first).
+
+swap – Show normal/default font first, then change to your font when it’s ready.
+
+fallback – Show normal font first, but only switch to your font if it loads quickly.
+
+optional – Like fallback, but might not even load your font if the internet is slow.
+
+Most used:
+Use swap — because it shows the text right away and changes the font when ready (so users don’t have to wait to read).
+
+Let me know if you want a real example or want to try it in a small project.
+
+
+
+
+
+
+
+
+Ask
+
+Search
+
+Make Image
+
+Research
+
+Can you give me a small demo with HTML and CSS?
+
+How does `font-display` compare to other font loading strategies?
+
+What happens if I don't use `font-display` at all?
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check </p>
+<br>
+<div class="div2">
+  
+</div><br>
+<p>
+  Font display property in css
+
+
+ChatGPT said:
+The font-display property in CSS is used with @font-face to control how web fonts are displayed while they are loading.
+
+Syntax:
+css
+Copy code
+@font-face {
+  font-family: 'MyFont';
+  src: url('myfont.woff2') format('woff2');
+  font-display: swap; /* or auto, block, fallback, optional */
+}
+Values of font-display:
+auto – Default behavior. The browser decides how to handle the font loading.
+
+block – Hides text until the font is fully loaded (can cause a "flash of invisible text").
+
+swap – Shows fallback font immediately, then swaps to the custom font when it's ready (causes "flash of unstyled text").
+
+fallback – Shows fallback font for a short time, then swaps to custom font only if it’s ready quickly.
+
+optional – Similar to fallback, but the font may never load on slow connections or if performance is prioritized.
+
+Example:
+css
+Copy code
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto.woff2') format('woff2');
+  font-display: swap;
+}
+Use font-display: swap; if you want better performance and user experience. Let me know if you want a demo or visual explanation too!
+
+
+
+
+
+
+
+You said:
+Explain insimple words
+
+
+ChatGPT said:
+Alright, here’s a simple explanation:
+
+The font-display property tells the browser what to do while your custom font is still loading.
+
+Imagine you're using a special font on your website, but it takes a little time to load. So, what should the browser do in that time? That’s what font-display controls.
+
+Simple meanings of the values:
+auto – Let the browser decide.
+
+block – Hide the text until the font loads (text is invisible at first).
+
+swap – Show normal/default font first, then change to your font when it’s ready.
+
+fallback – Show normal font first, but only switch to your font if it loads quickly.
+
+optional – Like fallback, but might not even load your font if the internet is slow.
+
+Most used:
+Use swap — because it shows the text right away and changes the font when ready (so users don’t have to wait to read).
+
+Let me know if you want a real example or want to try it in a small project.
+
+
+
+
+
+
+
+
+Ask
+
+Search
+
+Make Image
+
+Research
+
+Can you give me a small demo with HTML and CSS?
+
+How does `font-display` compare to other font loading strategies?
+
+What happens if I don't use `font-display` at all?
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check important info.
+</p><br>
+<div class="div2">
+  
+</div><br>
+<p>
+  fallback – Show normal font first, but only switch to your font if it loads quickly.
+
+optional – Like fallback, but might not even load your font if the internet is slow.
+
+Most used:
+Use swap — because it shows the text right away and changes the font when ready (so users don’t have to wait to read).
+
+Let me know if you want a real example or want to try it in a small project.
+
+
+
+
+
+
+
+
+Ask
+
+Search
+
+Make Image
+
+Research
+
+Can you give me a small demo with HTML and CSS?
+
+How does `font-display` compare to other font loading strategies?
+
+What happens if I don't use `font-display` at all?
+
+
+
+
+
+
+
+
+
+ChatGPT can make mistakes. Check important info.
+</p><br>
+<div class="div3">
+  
+</div>
+<div class="main">
+  <div class="first"></div>
+  <div class="second"></div>
+  <div class="third"></div>
+  <div class="fourth"></div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div id="parent">
+  <div id="child"><h1>... Here</h1></div>
+</div>
+</body>
+
+</html>

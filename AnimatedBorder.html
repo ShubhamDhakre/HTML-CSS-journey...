@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Border Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+    }
+
+    .card {
+      position: relative;
+      width: 300px;
+      padding: 2px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .border {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(270deg, #00ffcc, #ff00ff, #00ffcc);
+      background-size: 700% 700%;
+      animation: borderAnimation 6s linear infinite;
+      z-index: 2;
+    }
+
+    .content {
+      position: relative;
+      background: #121212;
+      border-radius: 12px;
+      padding: 20px;
+      z-index: 2;
+      color: white;
+      text-align: center;
+    }
+
+    @keyframes borderAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="border"></div>
+    <div class="content">
+      <h2>Animate Borders</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ad exercitationem voluptatem ullam...</p>
+    </div>
+  </div>
+
+</body>
+</html>
